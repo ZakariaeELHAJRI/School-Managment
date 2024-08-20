@@ -1,0 +1,29 @@
+.rtl-breadcrumb {
+    direction: rtl;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .rtl-breadcrumb .breadcrumb-item {
+    display: inline-block;
+  }
+  
+  .rtl-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: '>'; /* Change this to the appropriate icon or character */
+    padding: 0 5px;
+    color: #6c757d; /* Adjust color as needed */
+  }
+  
+  .rtl-breadcrumb .breadcrumb-item + .breadcrumb-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rtl-breadcrumb .breadcrumb-item:first-child {
+    padding-right: 0;
+  }
+  
+  .rtl-breadcrumb .breadcrumb-item:last-child {
+    padding-left: 0;
+  }
+  

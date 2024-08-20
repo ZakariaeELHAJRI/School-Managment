@@ -1,0 +1,47 @@
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+  }
+  
+  .details {
+    flex: 1;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .avatar {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .details {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+  

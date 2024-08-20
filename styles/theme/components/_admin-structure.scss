@@ -1,0 +1,138 @@
+// Header
+
+.header {
+  .navbar {
+    padding: 0.625rem 1.5rem;
+    #nav-toggle {
+      font-size: 20px;
+      color: var(--#{$prefix}gray-700);
+      line-height: 0.5;
+    }
+    .navbar-nav {
+      @media (max-width: 576px) {
+        flex-direction: row;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        flex-direction: row;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+// Layouts
+
+// Dashboard wrapper
+
+#db-wrapper {
+  overflow-x: hidden;
+  display: flex;
+}
+
+// Dashboard page content
+
+#page-content {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin-right: 15.625rem; // Change margin-left to margin-right
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#page-content-for-mini {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin-right: 75px; // Change margin-left to margin-right
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+// Dashboard navbar vertical toggled
+
+#db-wrapper.toggled .navbar-vertical {
+  margin-right: 0; // Change margin-left to margin-right
+}
+
+#db-wrapper.toggled .navbar-vertical-compact {
+  margin-right: 0; // Change margin-left to margin-right
+}
+
+// Dashboard page content toggled
+
+#db-wrapper.toggled #page-content {
+  margin-right: 0; // Change margin-left to margin-right
+}
+
+#db-wrapper.toggled #page-content-for-mini {
+  margin-right: 0; // Change margin-left to margin-right
+}
+
+// Media query for layout
+
+@media (max-width: 576px) {
+  #page-content {
+    margin-right: 0rem; // Change margin-left to margin-right
+  }
+
+  #db-wrapper.toggled {
+    #page-content {
+      margin-right: 15.6875rem; // Change margin-left to margin-right
+    }
+  }
+  #page-content-for-mini {
+    margin-right: 0px; // Change margin-left to margin-right
+  }
+
+  #db-wrapper.toggled {
+    #page-content-for-mini {
+      margin-right: 74px; // Change margin-left to margin-right
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-vertical {
+    margin-right: 0rem; // Change margin-left to margin-right
+  }
+  #page-content {
+    min-width: 0rem;
+    width: 100%;
+  }
+  #db-wrapper.toggled .navbar-vertical {
+    margin-right: -16rem; // Change margin-left to margin-right
+  }
+  .navbar-vertical-compact {
+    margin-right:0px; // Change margin-left to margin-right
+  }
+  #page-content-for-mini {
+    min-width: 0rem;
+    width: 100%;
+  }
+  #db-wrapper.toggled .navbar-vertical-compact {
+    margin-right: -74px; // Change margin-left to margin-right
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #page-content {
+    margin-right: 0rem; // Change margin-left to margin-right
+  }
+  #db-wrapper.toggled {
+    #page-content {
+      margin-right: 15.6875rem; // Change margin-left to margin-right
+    }
+  }
+  #page-content-for-mini {
+    margin-right: 0rem; // Change margin-left to margin-right
+  }
+  #db-wrapper.toggled {
+    #page-content {
+      margin-right: 74px; // Change margin-left to margin-right
+    }
+  }
+}
